@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FIT1050 Web Fundamentals - Week 9</title>
+	<link href="style.css" type="text/css" rel="stylesheet" media="screen">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script></script>
+
+</head>
+
+<body>
+
+	<h1>FIT1050 Web Fundamentals</h1>
+	<h2>Week 9 - JavaScript and jQuery</h2>
+
+	<p id="filters">
+		Filter:
+		<button data-filter=".book, .tv, .movie, .game">All</button>
+		<button data-filter=".book">Books</button>
+		<button data-filter=".tv">TV</button>
+		<button data-filter=".movie">Movies</button>
+		<button data-filter=".game">Games</button>
+	</p>
+
+	<p id="products">
+		<!-- images sourced from: www.bigw.com.au -->
+
+		<a href="images/small/aclashofkings.jpg" data-fancybox="gallery" data-caption="Caption #1">
+			<img src="images/small/aclashofkings.jpg" alt="" />
+		</a>
+
+		<a href="images/small/blazingsaddles.jpg" data-fancybox="gallery" data-caption="Caption #2">
+			<img src="images/small/blazingsaddles.jpg" alt="" />
+		</a>
+
+		<a href="images/small/bones.jpg" data-fancybox="gallery" data-caption="Caption #1">
+			<img src="images/small/bones.jpg" alt="" />
+		</a>
+
+		<a href="images/small/chappie.jpg" data-fancybox="gallery" data-caption="Caption #2">
+			<img src="images/small/chappie.jpg" alt="" />
+		</a>
+
+		<a href="images/small/criminalminds.jpg" data-fancybox="gallery" data-caption="Caption #1">
+			<img src="images/small/criminalminds.jpg" alt="" />
+		</a>
+
+		<a href="images/small/doctorwho.jpg" data-fancybox="gallery" data-caption="Caption #2">
+			<img src="images/small/doctorwho.jpg" alt="" />
+		</a>
+
+	</p>
+
+	<script>
+		$('button').click(function(){
+			var imgtype = $(this).data('filter');
+
+			swal("Button Click triggered!", "You clicked a \""+imgtype+"\" button!", "info");
+		});
+	</script>
+
+</body>
+
+</html>
